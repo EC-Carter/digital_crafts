@@ -80,104 +80,92 @@
 # print(lvowels)
 ######################################
 # 7. ceaser cipher
+# get the word or phase from user
 phrase = input("what would you like to encrypt?: ")
 phrase = phrase.lower()
+
+#create the key
 letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 alpha_list = list(letters)
 key = []
-encrypt_phrase = ""
+encrypt_phrase = []
 
 for i in alpha_list:
     shift = alpha_list[alpha_list.index(i) + 13]
     key.append(shift)
 
 key = key[:26]
-key_str = ""
-counter = 0
+
 
 for i in phrase:
-    if "a":
+    if i == "a":
         phrase = phrase.replace("a", key[0])
-    if "b":
+    if i == "b":
         phrase = phrase.replace("b", key[1])
-    if "c":
+    if i == "c":
         phrase = phrase.replace("c", key[2])
-    if "d":
+    if i == "d":
         phrase = phrase.replace("d", key[3])
-    if "e":
+    if i == "e":
         phrase = phrase.replace("e", key[4])
-    if "f":
+    if i == "f":
         phrase = phrase.replace("f", key[5])
-    if "g":
+    if i == "g":
         phrase = phrase.replace("g", key[6])
-    if "h":
+    if i == "h":
         phrase = phrase.replace("h", key[7])
-    if "i":
+    if i == "i":
         phrase = phrase.replace("i", key[8])
-    if "j":
+    if i == "j":
         phrase = phrase.replace("j", key[9])
-    if "k":
+    if i == "k":
         phrase = phrase.replace("k", key[10])
-    if "l":
+    if i == "l":
         phrase = phrase.replace("l", key[11])
-    if "m":
+    if i == "m":
         phrase = phrase.replace("m", key[12])
-    if "n":
+    if i == "n":
         phrase = phrase.replace("n", key[13])
-    if "o":
+    if i == "o":
         phrase = phrase.replace("o", key[14])
-    if "p":
+    if i == "p":
         phrase = phrase.replace("p", key[15])
-    if "q":
+    if i == "q":
         phrase = phrase.replace("q", key[16])
-    if "r":
+    if i == "r":
         phrase = phrase.replace("r", key[17])
-    if "s":
+    if i == "s":
         phrase = phrase.replace("s", key[18])
-    if "t":
+    if i == "t":
         phrase = phrase.replace("t", key[19])
-    if "u":
+    if i == "u":
         phrase = phrase.replace("u", key[20])
-    if "v":
+    if i == "v":
         phrase = phrase.replace("v", key[21])
-    if "w":
+    if i == "w":
         phrase = phrase.replace("w", key[22])
-    if "x":
+    if i == "x":
         phrase = phrase.replace("x", key[23])
-    if "y":
+    if i == "y":
         phrase = phrase.replace("y", key[24])
-    if "z":
+    if i == "z":
         phrase = phrase.replace("z", key[25])
+    if i == " ":
+        phrase = phrase.replace(" ", " ")
     
 print(phrase)
 
+# for count, i in enumerate(phrase):
+#     encrypt_phrase.append(key[count])
+    
+# print(encrypt_phrase)
 
-
-
-
-
-
-
-
-
-
+# key_str = ""
 # for i in key:
 #     key_str += i
 
-#print(key_str)
-
-# for i in phrase:
+#print(key)
+#nopqrstuvwxyzabcdefghijklm
+# for i in range(len(phrase)):
 #     encrypt_phrase.join(key_str[i])
 # print(encrypt_phrase)
-
-# for i in encrypt_phrase:
-#     i = key[i]
-# print(encrypt_phrase)
-
-# for count,i in enumerate(phrase):
-#     encrypt_phrase.join(key[i])
-# print(encrypt_phrase)
-
-
-
-
