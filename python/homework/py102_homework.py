@@ -28,6 +28,7 @@
 # list1 = [[2, 2],[5, 3]]
 # list2 = [[4,7],[5,2]]
 # sum_list = []
+
 # x = 2
 # for index1 in range(x) :
 #     list3 = []
@@ -80,92 +81,125 @@
 # print(lvowels)
 ######################################
 # 7. ceaser cipher
-# get the word or phase from user
-phrase = input("what would you like to encrypt?: ")
-phrase = phrase.lower()
+# index of (letter + 13) % 25 = 0, alph.index("l")
 
-#create the key
-letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
-alpha_list = list(letters)
-key = []
-encrypt_phrase = []
-
-for i in alpha_list:
-    shift = alpha_list[alpha_list.index(i) + 13]
-    key.append(shift)
-
-key = key[:26]
+#find finished version in ceaser_ciper.py in the python directory
 
 
-for i in phrase:
-    if i == "a":
-        phrase = phrase.replace("a", key[0])
-    if i == "b":
-        phrase = phrase.replace("b", key[1])
-    if i == "c":
-        phrase = phrase.replace("c", key[2])
-    if i == "d":
-        phrase = phrase.replace("d", key[3])
-    if i == "e":
-        phrase = phrase.replace("e", key[4])
-    if i == "f":
-        phrase = phrase.replace("f", key[5])
-    if i == "g":
-        phrase = phrase.replace("g", key[6])
-    if i == "h":
-        phrase = phrase.replace("h", key[7])
-    if i == "i":
-        phrase = phrase.replace("i", key[8])
-    if i == "j":
-        phrase = phrase.replace("j", key[9])
-    if i == "k":
-        phrase = phrase.replace("k", key[10])
-    if i == "l":
-        phrase = phrase.replace("l", key[11])
-    if i == "m":
-        phrase = phrase.replace("m", key[12])
-    if i == "n":
-        phrase = phrase.replace("n", key[13])
-    if i == "o":
-        phrase = phrase.replace("o", key[14])
-    if i == "p":
-        phrase = phrase.replace("p", key[15])
-    if i == "q":
-        phrase = phrase.replace("q", key[16])
-    if i == "r":
-        phrase = phrase.replace("r", key[17])
-    if i == "s":
-        phrase = phrase.replace("s", key[18])
-    if i == "t":
-        phrase = phrase.replace("t", key[19])
-    if i == "u":
-        phrase = phrase.replace("u", key[20])
-    if i == "v":
-        phrase = phrase.replace("v", key[21])
-    if i == "w":
-        phrase = phrase.replace("w", key[22])
-    if i == "x":
-        phrase = phrase.replace("x", key[23])
-    if i == "y":
-        phrase = phrase.replace("y", key[24])
-    if i == "z":
-        phrase = phrase.replace("z", key[25])
-    if i == " ":
-        phrase = phrase.replace(" ", " ")
+
+
+#____________________________________________________________________________
+
+# for i in phrase:
+#     i = letters.index( i + 13) % 25
+#     print (phrase)
+
+#     TypeError: can only concatenate str (not "int") to str
+
+# for i in phrase:
+#     key = letters.index(i) + 13 % 25
+#     phrase_encrypt = phrase_encrypt.join(letters[key])
+#     print (phrase_encrypt)
+
+#     IndexError: string index out of range
+
+# for i in phrase: 
+#     if i == " " or isinstance(i, str) == False:
+#         n = i
+#     else:
+#         n = letters[(letters.index(i) + 13) % 26]
+#     phrase_encrypt += phrase_encrypt.join(n)
+
+# print (phrase_encrypt
+
+#_____________________________________________________________________________
+
+# # get the word or phase from user
+# phrase = input("what would you like to encrypt?: ")
+# phrase = phrase.lower()
+
+# #create the key
+# letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+# alpha_list = list(letters)
+# key = []
+# encrypt_phrase = []
+
+# for i in alpha_list:
+#     shift = alpha_list[alpha_list.index(i) + 13]
+#     key.append(shift)
+
+# key = key[:26]
+
+
+# for i in phrase:
+#     if i == "a":
+#         phrase = phrase.replace("a", key[0])
+#     if i == "b":
+#         phrase = phrase.replace("b", key[1])
+#     if i == "c":
+#         phrase = phrase.replace("c", key[2])
+#     if i == "d":
+#         phrase = phrase.replace("d", key[3])
+#     if i == "e":
+#         phrase = phrase.replace("e", key[4])
+#     if i == "f":
+#         phrase = phrase.replace("f", key[5])
+#     if i == "g":
+#         phrase = phrase.replace("g", key[6])
+#     if i == "h":
+#         phrase = phrase.replace("h", key[7])
+#     if i == "i":
+#         phrase = phrase.replace("i", key[8])
+#     if i == "j":
+#         phrase = phrase.replace("j", key[9])
+#     if i == "k":
+#         phrase = phrase.replace("k", key[10])
+#     if i == "l":
+#         phrase = phrase.replace("l", key[11])
+#     if i == "m":
+#         phrase = phrase.replace("m", key[12])
+#     if i == "n":
+#         phrase = phrase.replace("n", key[13])
+#     if i == "o":
+#         phrase = phrase.replace("o", key[14])
+#     if i == "p":
+#         phrase = phrase.replace("p", key[15])
+#     if i == "q":
+#         phrase = phrase.replace("q", key[16])
+#     if i == "r":
+#         phrase = phrase.replace("r", key[17])
+#     if i == "s":
+#         phrase = phrase.replace("s", key[18])
+#     if i == "t":
+#         phrase = phrase.replace("t", key[19])
+#     if i == "u":
+#         phrase = phrase.replace("u", key[20])
+#     if i == "v":
+#         phrase = phrase.replace("v", key[21])
+#     if i == "w":
+#         phrase = phrase.replace("w", key[22])
+#     if i == "x":
+#         phrase = phrase.replace("x", key[23])
+#     if i == "y":
+#         phrase = phrase.replace("y", key[24])
+#     if i == "z":
+#         phrase = phrase.replace("z", key[25])
+#     if i == " ":
+#         phrase = phrase.replace(" ", " ")
     
-print(phrase)
-
-# for count, i in enumerate(phrase):
-#     encrypt_phrase.append(key[count])
+# print(phrase)
+#___________________________________________________________________________________
+# # for count, i in enumerate(phrase):
+# #     encrypt_phrase.append(key[count])
     
-# print(encrypt_phrase)
+# # print(encrypt_phrase)
 
-# key_str = ""
-# for i in key:
-#     key_str += i
+# # key_str = ""
+# # for i in key:
+# #     key_str += i
 
-#print(key)
-#nopqrstuvwxyzabcdefghijklm
-# for i in range(len(phrase)):
-#     encrypt_phrase.join(key_str[i])
-# print(encrypt_phrase)
+# #print(key)
+# #nopqrstuvwxyzabcdefghijklm
+# # for i in range(len(phrase)):
+# #     encrypt_phrase.join(key_str[i])
+# # print(encrypt_phrase)
