@@ -1,0 +1,50 @@
+body {
+    background-image:url("images/rainbow-cartoon.png");
+    background-repeat: repeat-x;
+    padding-top:200px;
+    
+}
+
+h1{
+    color:blue;
+text-align: center;    
+}
+h2{
+    color:Green;
+text-align: center;    
+}
+h4{
+    color:blueviolet;
+text-align: center;    
+}
+
+p {
+    width: 50%;
+    text-align: center;
+    margin:auto;
+    padding:20px;
+}
+
+nav{
+    text-align: center;
+}
+
+nav li {
+    list-style-type: none;
+    margin:0;
+    display:inline;
+    padding: 8px;
+    background-color:beige;
+    
+
+}
+
+img{
+display: block;
+margin: auto;
+padding:5px;
+
+}
+ul{
+    color:darkmagenta;
+}
