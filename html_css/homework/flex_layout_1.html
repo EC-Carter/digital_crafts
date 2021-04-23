@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex layout 1</title>
+    <style>
+        body{
+    margin:0;
+    height:100vh;
+    width:100vw;
+
+}
+header, footer{
+    height:10%;
+    width:100%;
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+main{
+    min-height:80vh;
+    display:flex;
+    justify-content: space-around;  
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+
+}
+div{
+    /* height:80%;
+    width:300px; */
+    margin:30px;
+}
+
+.leftCont{
+    background-color: pink;
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   
+}
+    
+
+
+.rightCont{
+    background-color: grey;
+    flex: 2;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+}
+    
+
+
+h1{
+    color:white;
+}
+footer>p{
+    color:white;
+    
+}
+
+p{
+    padding:1.5em;
+    margin:0px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main>
+        <div class="leftCont">
+            <h3>Left Content</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis placeat consectetur quisquam blanditiis repellat accusantium. Quo consequatur rerum magni optio ipsa. Qui facere beatae amet! Consectetur ducimus laboriosam quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequuntur dolore nulla, quidem modi maxime? Optio fugiat voluptatum totam vero deserunt, ipsum quidem maxime repudiandae id praesentium nemo recusandae incidunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam fugit possimus consequuntur molestias. Dolorem debitis ab laboriosam hic fuga veritatis! Autem fugiat in mollitia temporibus cumque est beatae nulla sapiente!</p>
+        </div>
+        <div class="rightCont">
+            <h3>Right Content</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis placeat consectetur quisquam blanditiis repellat accusantium. Quo consequatur rerum magni optio ipsa. Qui facere beatae amet! Consectetur ducimus laboriosam quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequuntur dolore nulla, quidem modi maxime? Optio fugiat voluptatum totam vero deserunt, ipsum quidem maxime repudiandae id praesentium nemo recusandae incidunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam fugit possimus consequuntur molestias. Dolorem debitis ab laboriosam hic fuga veritatis! Autem fugiat in mollitia temporibus cumque est beatae nulla sapiente!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>this is the content of the footer</p>
+    </footer>
+</body>
+</html>

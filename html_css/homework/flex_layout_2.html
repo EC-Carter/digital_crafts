@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex layout 2</title>
+    <style>
+        body{
+    margin:0;
+    height:100vh;
+    width:100vw;
+
+}
+header, footer{
+    height:10%;
+    width:100%;
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+main{
+    min-height:80%;
+    display:flex;
+    justify-content: space-around;  
+    align-items: flex-start;
+
+}
+div{
+    margin:30px;
+    height:70vh;
+}
+
+.leftCont{
+    background-color: pink;
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+}
+    
+
+
+.rightCont{
+    background-color: grey;
+    flex: 2;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+    
+
+
+h1{
+    color:white;
+}
+footer>p{
+    color:white;
+    
+}
+
+p{
+    padding:1.5em;
+    margin:0px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main>
+        <div class="leftCont">
+            <h3>Left Content</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam hic corporis nostrum nulla illum iure fuga recusandae fugiat. Voluptates numquam aut labore eum unde, hic rerum atque sequi illum debitis?</p>
+        </div>
+        <div class="rightCont">
+            <h3>Right Content</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam hic corporis nostrum nulla illum iure fuga recusandae fugiat. Voluptates numquam aut labore eum unde, hic rerum atque sequi illum debitis?</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam hic corporis nostrum nulla illum iure fuga recusandae fugiat. Voluptates numquam aut labore eum unde, hic rerum atque sequi illum debitis?</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam hic corporis nostrum nulla illum iure fuga recusandae fugiat. Voluptates numquam aut labore eum unde, hic rerum atque sequi illum debitis?</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>this is the content of the footer</p>
+    </footer>
+</body>
+</html>
