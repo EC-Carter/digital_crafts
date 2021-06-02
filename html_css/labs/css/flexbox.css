@@ -1,0 +1,46 @@
+body{
+    margin:0px;
+}
+.container{
+    height: 1500px;
+    background-color:turquoise;
+    display:flex;
+    justify-content: flex-start;  /* main axis */  
+    align-items: center; /* cross axis */
+    flex-direction: row; /* identifies main axis */
+    /* flex-wrap: wrap-reverse; */
+
+}
+.item{
+    /* width:150px; */
+    height:150px;
+    background-color:tomato;
+    color:white;
+    margin:10px;
+    font-size: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow:1; */
+}
+.order1{
+    order:1;
+}
+
+.order2{
+    order:2;
+}
+
+.fg1{
+    /* flex-grow: 1; */
+    flex:1;
+}
+.fg2{
+    flex-grow: 2;
+}
+.fg3{
+    flex-grow: 3;
+}
+.top{
+    align-self: flex-start;
+}

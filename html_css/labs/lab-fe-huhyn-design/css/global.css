@@ -1,0 +1,59 @@
+/* black -#000000
+navy - #14213D
+gold - #FCA311  (accent)
+light gray - #E5E5E5
+white = #FFFFFF */
+
+body{
+  margin:0px;
+  padding:0px;
+}
+.bg-black{
+    background-color: black;
+}
+
+.bg-navy{
+    background-color: #14213D;
+}
+
+.bg-accent{
+    background-color: #FCA311;
+}
+.bg-lightGrey{
+    background-color: #E5E5E5;
+}
+.txt-black{
+    color: black;
+}
+
+.txt-navy{
+    color: #14213D;
+}
+
+.txt-accent{
+    color: #FCA311;
+}
+.txt-lightGrey{
+    color: #E5E5E5;
+}
+.txt-lightGrey a{
+    color: #E5E5E5;
+}
+.txt-lightGrey a:hover{
+    color: #FCA311;
+}
+
+.top{
+    top:0px;
+}
+.ps-light{
+    background-color: white;
+    /* height:550px; */
+    width:100%;
+}
+.ps-grey{
+    background-color: #E5E5E5;
+    height:550px;
+    width:100%;
+    
+}

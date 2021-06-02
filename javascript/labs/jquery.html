@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo facere voluptas corporis beatae, cumque, adipisci reiciendis dicta neque veniam repudiandae excepturi eum placeat dolorem animi nobis? Quam pariatur nemo reprehenderit!
+    </div>
+
+    <p>hello world</p>
+
+    <a href="#">our site</a>
+
+    <span class="ourSpanTag"> Hello world 2</span>
+<br>
+
+    <textarea name="someName" id="ta" cols="30" rows="10"></textarea>
+    <br>
+    <button id = "myButton">My button</button>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            let rest = [];
+            var ypURL = ["https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C+TX",
+                "https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C%20TX&page=2",
+                "https://www.yellowpages.com/search?search_terms=restaurants&geo_location_terms=Houston%2C%20TX&page=3"
+            ]
+
+            //page 14 in the ajax slide
+            ypURL.forEach((url)=>{
+
+                $.get(url)
+                .done(data=>{
+                    let $results = $(data).find('.title,.business-name');
+                    //console.log($results);
+
+                    for(let r of $results){
+                        //console.log(r.innerText);
+                        //console.log(`${r.innerText}`);
+                        rest.push(`${r.innerText}`)
+                        
+                    }
+                })
+            })
+            
+            console.log(rest);
+
+            //searching
+            // $('div')
+            // $('.myClass')
+            // $('#myID')
+
+            // let $div = $('div');
+            // $div.html("replaced text");
+            // // console.log($div[0]);
+            // // console.log($div);
+            // let $p = $('p');
+            // // console.log($p);
+            // // console.log($p[0])
+            // let $a = $('a');
+            // let $span = $('.ourSpanTag');
+            // console.log($span);
+
+            // //createing new elements
+            // $anchor = $("<a>",{
+            //     'class': 'nav-item',
+            //     'text': 'our new anchor tag',
+            //     'href': '#'
+            // });
+
+            // $($div).append($anchor);
+
+            // $("#ta").fadeIn(3000);
+            // $('#myButton').click(()=>{
+            //     // $("#ta").show().fadeIn(3000)
+            // })
+
+        })
+    </script>
+</body>
+</html>

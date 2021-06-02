@@ -1,14 +1,14 @@
-1 smallest number
-numList = [4,7,9,-1,8,-12]
-numList2 = [123,234,234,987,567,345,9908,234,532]
-def smallestNum(numbers):
-    smallest = numbers[0]
-    for i in range(len(numbers)):
-        if numbers[i]  <  smallest:
-            smallest = numbers[i]
-    return smallest
-smallestNumber = smallestNum(numList2)
-print(smallestNumber)  
+# 1 smallest number
+# numList = [4,7,9,-1,8,-12]
+# numList2 = [123,234,234,987,567,345,9908,234,532]
+# def smallestNum(numbers):
+#     smallest = numbers[0]
+#     for i in range(len(numbers)):
+#         if numbers[i]  <  smallest:
+#             smallest = numbers[i]
+#     return smallest
+# smallestNumber = smallestNum(numList2)
+# print(smallestNumber)  
 
 # #2 largest number
 # numList = [4,7,9,-1,8,-12]

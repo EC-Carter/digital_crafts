@@ -1,0 +1,41 @@
+body{
+    margin:0px;
+}
+
+.header{
+    height:300px;
+    overflow:hidden;
+    position:relative;
+    background-color:yellow;
+}
+
+.imageContainer{
+    position:relative;
+}
+
+.cityImage{
+    position:absolute;
+    top:-200px;
+   
+}
+
+.textContainer{
+    position:absolute;
+    z-index:10;
+    text-align: center;
+    color:white;
+    height:100%;
+    width:100%;
+    line-height:300px;
+    font-size:60px;
+}
+
+.opacity{
+    height:100%;
+    width:100%;
+    background-color:blue;
+    position:absolute;
+    opacity:30%;
+    z-index:5;
+
+}

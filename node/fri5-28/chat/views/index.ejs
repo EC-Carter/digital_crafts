@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="greeting"></div>
+   <form>
+       <input type="text" id="chat">
+       <button type="submit">Submit</button>
+   </form>
+
+   <ul id="messages">
+       
+   </ul>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
+<script>
+    const socket = io();//client websocket api
+    //find form
+    //attach event listener
+    //find chat input field
+    //retrieve message from input field
+    //take socket object and emit message to node server socket.emit()
+    //THEN LISTEN FOR INCOMING
+    //listen for incoming messages coming from other clients
+    //socket.on()
+    socket.on('chatMessage',(msg) => {
+        console.log(msg)
+        let greeting = document.querySelector('.greeting');
+        greeting.innerHTML = msg.value;
+    })
+
+    let form = document.querySelector('form');
+    form.addEventListener('submit',(e) => {
+        e.preventDefault();
+        let chat = document.querySelector('#chat');
+        socket.emit('msgFromClient',chat.value);
+    })
+
+    socket.on('msgFromServer',(serverMessage) => {
+        let messages = document.querySelector('#messages')
+        let liTags = `<li>${serverMessage}</li>` + messages.innerHTML;
+        messages.innerHTML = liTags;
+    })
+</script>
+</body>
+</html>

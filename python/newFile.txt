@@ -1,0 +1,5 @@
+students = {
+    'Giselle' : 'Las Vegas'
+    'Lane' : 'Atlanta'
+    'Victoria' : 'Humble'
+}

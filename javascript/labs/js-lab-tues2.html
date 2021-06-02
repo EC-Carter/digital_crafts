@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2 creating elements</title>
+</head>
+<body>
+    <nav>This is the nav bar</nav>
+
+    <script>
+        var anchor = document.createElement('a');
+        anchor.setAttribute('href', "http://google.com");
+        anchor.textContent = "Google";
+
+        var nav = document.querySelector('nav');
+        nav.append(anchor);
+
+
+
+
+        //create the element
+        var h1 = document.createElement('h1');
+        //set content
+        h1.textContent = "hello world";
+        //retrieve and existing element out of DOM
+        var body = document.querySelector('body');
+        //attach new element 
+        body.append(h1);
+    </script>
+    
+</body>
+</html>
